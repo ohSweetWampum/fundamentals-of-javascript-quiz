@@ -36,12 +36,21 @@ var countdownClock = document.getElementById("countdown");
  timeLeftClock();
 });
 
+// Show if 
+
+//
+function afterStartIsPushed(){
+
+var questionsSection = document.querySelector(
+    "question-text")[0];
+var answerSection = document.querySelector(
+    "question-text")[0];
+var wrongOrRightSection = document.querySelector(
+        "question-text")[0]
+}
 
 
 
-
-
-});
 
 // Making my  questions, made an array of objects.Easy access to all questions via an index.Made a property "options" array for each questions options.
 Var quizQuestions = 
@@ -90,3 +99,8 @@ Var quizQuestions =
     options: ["almost done", " used to set or add an attribute to a particular element and provides a value to it", "good job", "you'll make it" ],
     correctOption: 1
 }];
+
+});
+
+
+//
