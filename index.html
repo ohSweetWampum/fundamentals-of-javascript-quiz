@@ -12,54 +12,54 @@
    
 
 <!--Start screen -->
-    <section id = "starting-screen">
+    <section id = "startingScreen">
         <div>
-            <h1 id = "h1-start-screen">JavaScript Quiz</h1>
-            <p id = "p-start-screen">Welcome! Learning JavaScript is a necessity for modern fullstack developers. This quiz is designed to test your understanding of JavaScript. This quiz is a multiple choice quiz consisting of 10 questions about JavaScript. You have 2 minutes to complete the quiz and every question you get wrong substracts 5 seconds off the timer, so choose wisely! Click the start button once you are ready to begin. </p>
+            <h1 id = "h1StartScreen">JavaScript Quiz</h1>
+            <p id = "pStartScreen">Welcome! Learning JavaScript is a necessity for modern fullstack developers. This quiz is designed to test your understanding of JavaScript. This quiz is a multiple choice quiz consisting of 9 questions about JavaScript. You have 2 minutes to complete the quiz and every question you get wrong substracts 5 seconds off the timer, so choose wisely! Click the start button once you are ready to begin. </p>
         </div>
         <div>
-            <button id = "start-timer-now-button">START</button>
+            <button id = "startTimerNowButton">START</button>
         </div>
     </section>
 
 
 <!--Question Section (make like 10) -->
-    <section id = "questions-screen" >
-        <div id = "countdown-timer">
-            <label id = "seconds-left-on-timer" >Seconds Left: </label>
-            <p id = "actual-time-left"></p>
+    <section id = "questionsScreen" style="display: none;" >
+        <div id = "countdownTimer">
+            <label id = "secondsLeftOnTimer" >Seconds Left: </label>
+            <p id = "actualTimeLeft"></p>
         </div>
         <div>
-            <h1 id = "h1-question-text">dhdgbrgtb</h1>
+            <h1 id = "h1QuestionText">dhdgbrgtb</h1>
         </div>
         <div>
-            <button id = "answer-button-id" >erfgerf</button>
-            <button id = "answer-button-id" >erfgerf</button>
-            <button id = "answer-button-id" >erfgerf</button>
-            <button id = "answer-button-id" >erfgerf</button>
+            <button class = "answerButtonClass" >erfgerf</button>
+            <button class = "answerButtonClass"  >erfgerf</button>
+            <button class = "answerButtonClass"  >erfgerf</button>
+            <button class = "answerButtonClass"  >erfgerf</button>
         </div>
     </section>
 
    <!--Game over screen where you are displayed score and can enter intials  -->
-    <section id = "game-over-screen">
+    <section id = "gameOverScreen" style="display: none;">
         <div>
-            <h1 id = "game-over-h1">Game Over!</h1>
-            <p id = "game-over-p">Your score: <span id="saved-score"></span></p>
-            <form id="game-over-form">
+            <h1 id = "gameOverH1">Game Over!</h1>
+            <p id = "gameOverP">Your score: <span id="savedScore"></span></p>
+            <form id="gameOverForm">
             <label>Enter your intials:</label>
-            <input class="enter-initals-here" placeholder="Enter Your Initials Here" type="text"/>
-            <button id = "submit-intials-button"></button>
+            <input id="enterInitalsHere" placeholder="Enter Your Initials Here" type="text"/>
+            <button id = "submitIntialsButton"></button>
         </div>
     </section>
 
  <!-- highscore leaderboard screen -->
 
-    <section id = "leaderboard-screen">
+    <section id = "leaderboardScreen" style="display: none;">
     <div>
-        <h1 id = "leaderboard-h1">leaderboard:</h1>
+        <h1 id = "leaderboardH1">leaderboard:</h1>
     </div>
     <div>
-        <ol id = "leaderboard-additions"></ol>
+        <ol id = "leaderboardAdditions"></ol>
     </div>
     <script src="./script.js"></script>
   </body>

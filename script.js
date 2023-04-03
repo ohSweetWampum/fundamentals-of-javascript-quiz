@@ -3,57 +3,81 @@
 //If the users clicks a wrong answer then time is subsracted from the clock
 //when all questions are answered or the timer reaches 0, then the game ends
 //upon the game ending a screen pops up showing high scores and you can enter your initials to save your score on the leaderboard
-
-
-// encapsulated my code in this eventlistener, which waits until page is loaded before executing the JS code
-document.addEventListener("DOMContentLoaded", function() {
-
-  
-var countdownClock = document.getElementById("countdown");
-
- var secondsLeft = 120;
-
-
- document.getElementById("start-timer-now-button").addEventListener("click", function(){
- function timeLeftClock(){
-    var timerInterval = setInterval(function(){
-        secondsLeft--;
-        countdownClock.textContent = secondsLeft + " seconds left!";
-        if( answer === false){
-            secondsLeft-=7;
-            countdownClock.textContent = secondsLeft + " seconds left!";}
-        else if(secondsLeft === 0){
-            clearInterval(timerInterval);
-            gameOverMessage();
-        }
-    }, 1000);
- }
-
- function gameOverMessage(){
-    countdownClock.textContent = " ";
- }
  
- timeLeftClock();
+//Initializing starting score and what question they are on
+ var score = 0;
+ var currentQuestion = 0;
+
+
+// retrieving all html elements that I need manipulate
+//Start screen
+var startingSectionElement = document.getElementById("startingScreen");
+var startButtonElement = document.getElementById("startTimerNowButton");
+//question screen
+var questionsSectionElement = document.getElementById("questionsScreen");
+var timeLeftElement = document.getElementById("actualTimeLeft");
+var questionsTextElement = document.getElementById("h1QuestionText");
+var AnswerOptionButtonsElement = document.querySelectorAll("answerButtonClass");
+//gamerover section
+var gameOverSectionElement = document.getElementById("gameOverScreen");
+var userScoreElement = document.getElementById("savedScore");
+var enterInitialsElement = document.getElementById("enterInitalsHere");
+var submitButtonElement = document.getElementById("submitIntialsButton");
+
+//lederboard section
+var leaderboardScreenSectionElement = document.getElementById("leaderboardScreen");
+var leaderboardAdditionsElement = document.getElementById("leaderboardAdditions");
+
+
+//Adding all event listeners
+
+
+
+startButtonElement.addEventListener("click", function() {
+  startingSectionElement.style.display = "none";
+  questionsSectionElement.style.display = "block";
 });
 
-// Show if 
+// // encapsulated my code in this eventlistener, which waits until page is loaded before executing the JS code
+// document.addEventListener("DOMContentLoaded", function() {
 
-//
-function afterStartIsPushed(){
+  
+// var countdownClock = document.getElementById("countdown");
 
-var questionsSection = document.querySelector(
-    "question-text")[0];
-var answerSection = document.querySelector(
-    "question-text")[0];
-var wrongOrRightSection = document.querySelector(
-        "question-text")[0]
-}
+//  var secondsLeft = 120;
+
+// //Creating all of the functions I will need to run the quiz
+//  document.getElementById("start-timer-now-button").addEventListener("click", function(){
+//  function timeLeftClock(){
+//     var timerInterval = setInterval(function(){
+//         secondsLeft--;
+//         countdownClock.textContent = secondsLeft + " seconds left!";
+//         if( answer === false){
+//             secondsLeft-=7;
+//             countdownClock.textContent = secondsLeft + " seconds left!";}
+//         else if(secondsLeft === 0){
+//             clearInterval(timerInterval);
+//             gameOverMessage();
+//         }
+//     }, 1000);
+//  }
+
+//  function gameOverMessage(){
+//     countdownClock.textContent = " ";
+//  }
+ 
+
+
+
+
+
+
 
 
 
 
 // Making my  questions, made an array of objects.Easy access to all questions via an index.Made a property "options" array for each questions options.
-Var quizQuestions = 
+var quizQuestions = 
 [{
     question: "What does JavaScript do?",
     options: ["Makes web page interactive","Styles the web page", "Creates basic layout of webpage", "Connects site to internet" ],
@@ -100,7 +124,6 @@ Var quizQuestions =
     correctOption: 1
 }];
 
-});
 
 
-//
+
