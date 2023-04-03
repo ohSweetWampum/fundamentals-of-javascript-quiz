@@ -31,6 +31,13 @@
   #h1StartScreen, #pStartScreen {
     margin-bottom: 30px;
   }
+  #seeMyScoreButton{
+    width: 200px;
+    height: 80px;
+    font-size: 40px;
+    border-radius: 20%;
+
+  }
   
   
 
