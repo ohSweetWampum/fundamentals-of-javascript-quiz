@@ -26,14 +26,12 @@ This is a multiple-choice quiz on the fundamentals of JavaScript. It was made wi
 
 ## Usage
 
-1. dv
-2. dv
-3. dv
-4. dv
-5. vdv
-6. dv
+1. Click start button
+2. Answer questions
+3. Enter Initials
+4. Play again
 
-![Alt Text](put gif rel path here)
+![Alt Text](gifs/2023-04-04 01.44.33.gif)
 
 ## Code Highlight
 
@@ -61,21 +59,6 @@ Matthew Gibson
 - [Github](https://github.com/ohSweetWampum)
 
 ## Credits
-
-[meyerweb.com](https://meyerweb.com/eric/tools/css/reset/)
-(For my reset.css file)
-
-[w3schools.com](https://www.w3schools.com/js/js_array_methods.asp)
-(array methods)
-
-[w3schools.com](https://www.w3schools.com/js/js_if_else.asp)
-(else if statements)
-
-[w3schools.com](https://www.w3schools.com/js/js_loop_while.asp)
-(while loops)
-
-[developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
-(math.random())
 
 ## License
 
