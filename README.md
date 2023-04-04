@@ -31,24 +31,33 @@ This is a multiple-choice quiz on the fundamentals of JavaScript. It was made wi
 3. Enter Initials
 4. Play again
 
-![Alt Text](gifs/2023-04-04 01.44.33.gif)
+![Alt Text](./assets/gifs/2023-04-04%2001.44.33.gif)
 
 ## Code Highlight
 
+This function below retrieves the exsisting array of user scores from local storage, if none exsists then it creates an empty array. It then adds the user's score to the array and saves the updated array back to local storage. I chose this code snippet because it stumped me for a while. I kept getting an error from it, what happens is during the first run of the code, savedScores will be null since it has not been set before. So, you need to check if it is an array or not, if its not an array then it intializes it as an empty array.
+
 ```JavaScript
-copy and paste code here
+//function to store user data to local storage
+  function storeToLocal(userScore) {
+    var savedScores = JSON.parse(localStorage.getItem("userScore")) || [];
+//This checks if the value of savedScores is an array. If it's not an array, it sets savedScores to empty.
+    if (!Array.isArray(savedScores)) {
+      savedScores = [];
+    }
+    savedScores.push(userScore);
+    localStorage.setItem("userScore", JSON.stringify(savedScores));
+  }
 
 ```
 
 ## Learning Points
 
-- vf
-- vf
-- vf
-- vf
-- vf
-- vf
-- dv
+- May need to check if a variable is an array or not in order to save to local storage
+- How to use event listeners
+- how to retrieve elements from the html (getElementById)
+- How to use .textContent
+- JSON ,Stringify
 
 ## Author Info
 
@@ -59,6 +68,11 @@ Matthew Gibson
 - [Github](https://github.com/ohSweetWampum)
 
 ## Credits
+
+[Meyer CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
+[local Storage Tips](<https://blog.teamtreehouse.com/storing-data-on-the-client-with-localstorage#:~:text=To%20store%20data%20in%20LocalStorage%2C%20you%20use%20the%20setItem(),name'%2C%20'Matt%20West'>)%3B)
+[CSS tips](https://css-tricks.com/)
+[JavaScript](https://www.w3schools.com/js/)
 
 ## License
 
