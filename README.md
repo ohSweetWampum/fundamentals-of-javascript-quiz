@@ -69,10 +69,10 @@ Matthew Gibson
 
 ## Credits
 
-[Meyer CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
-[local Storage Tips](<https://blog.teamtreehouse.com/storing-data-on-the-client-with-localstorage#:~:text=To%20store%20data%20in%20LocalStorage%2C%20you%20use%20the%20setItem(),name'%2C%20'Matt%20West'>)%3B)
-[CSS tips](https://css-tricks.com/)
-[JavaScript](https://www.w3schools.com/js/)
+- [Meyer CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
+- [local Storage Tips](<https://blog.teamtreehouse.com/storing-data-on-the-client-with-localstorage#:~:text=To%20store%20data%20in%20LocalStorage%2C%20you%20use%20the%20setItem(),name'%2C%20'Matt%20West'>)
+- [CSS tips](https://css-tricks.com/)
+- [JavaScript](https://www.w3schools.com/js/)
 
 ## License
 
