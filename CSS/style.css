@@ -1,1 +1,247 @@
+/* Global styles */
+#startingScreen, #questionsScreen, #gameOverScreen, #leaderboardScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
+#questionsScreen, #gameOverScreen {
+  display: none;
+}
+
+#startingScreen div {
+  text-align: center;
+}
+
+#startingScreen h1 {
+  font-size: 70px;
+}
+
+#startingScreen p {
+  font-size: 30px;
+}
+
+#startingScreen button, .answerButtonClass {
+  width: 200px;
+  height: 80px;
+  font-size: 24px;
+  border-radius: 20%;
+}
+
+#seeMyScoreButton, #submitIntialsButton, #playAgain {
+  width: 150px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styles for answer option buttons */
+.answerButtonClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border: none;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  background-color: #f7f7f7;
+  color: #333;
+  cursor: pointer;
+}
+
+.selected-answer {
+  background-color: #333;
+  color: #f7f7f7;
+  box-shadow: none;
+}
+
+/* Styles for leaderboard section */
+#leaderboardScreen ol {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+  font-size: 24px;
+}
+
+#leaderboardScreen li {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+/* Center question text and answer option buttons */
+#questionsScreen div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.answerButtonClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 80px;
+  font-size: 16px; /* adjust font size as needed */
+  margin: 20px;
+  padding: 10px; /* adjust padding as needed */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  background-color: #f7f7f7;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Styles for countdown timer */
+#countdownTimer {
+  margin-bottom: 20px;
+}
+
+#secondsLeftOnTimer {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+#actualTimeLeft {
+  font-size: 24px;
+}
+
+/* Styles for submit and play again buttons */
+#submitButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#submitIntialsButton, #playAgain {
+  margin-top: 20px;
+  background-color: #2196f3;
+  color: #f7f7f7;
+}
+
+#submitIntialsButton {
+  width: 70px;
+  height: 20px;
+  font-size: 20px;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#h1QuestionText {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin: 40px 0;
+  text-shadow: 2px 2px magenta;
+}
+#gameOverH1 {
+  font-size: 72px;
+  color: #333;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+#gameOverP {
+  font-size: 36px;
+  color: #333;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* Style for game over screen */
+#gameOverScreen {
+  text-align: center;
+}
+
+#gameOverH1 {
+  font-size: 80px;
+}
+
+#gameOverP {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+#enterInitalsHere {
+  width: 400px;
+  height: 60px;
+  font-size: 30px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+  padding: 10px;
+}
+
+#submitIntialsButton {
+  width: 150px;
+  height: 60px;
+  font-size: 30px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  background-color: #4caf50;
+  color: #f7f7f7;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#submitButtonContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+/* Style for leaderboard section */
+#leaderboardScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#leaderboardScreen h1 {
+  font-size: 60px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#leaderboardScreen ol {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+#leaderboardScreen ol li {
+  margin-bottom: 10px;
+}
+#playAgain {
+  margin-top: 20px;
+  width: 150px;
+  height: 50px;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  background-color: #2196f3;
+  color: #f7f7f7;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  align-self: flex-start;
+}
+#leaderboardScreen button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#playAgain {
+  margin: auto;
+  display: block;
+}

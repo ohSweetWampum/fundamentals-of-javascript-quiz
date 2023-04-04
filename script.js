@@ -219,10 +219,18 @@ document.addEventListener("DOMContentLoaded", function () {
   submitButtonElement.addEventListener("click", gameOverMessage);
 
   function loadLeaderboardScreen() {
-    // Get the saved scores from local storage or an empty array if none exist
+    
     var savedScores = JSON.parse(localStorage.getItem("userScore")) || [];
-
-    // Clear the leaderboard and add each score as a list item
+  
+   
+    savedScores.sort(function (a, b) {
+      return b.score - a.score;
+    });
+  
+   
+    savedScores = savedScores.slice(0, 10);
+  
+    
     leaderboardAdditionsElement.innerHTML = "";
     for (var i = 0; i < savedScores.length; i++) {
       var leaderboardAdditions = document.createElement("li");
@@ -230,14 +238,14 @@ document.addEventListener("DOMContentLoaded", function () {
         savedScores[i].initials + " -> " + savedScores[i].score;
       leaderboardAdditionsElement.appendChild(leaderboardAdditions);
     }
-
-    // Hide all other screens and show the leaderboard screen
+  
+   
     startingSectionElement.style.display = "none";
     questionsSectionElement.style.display = "none";
     gameOverSectionElement.style.display = "none";
     leaderboardScreenSectionElement.style.display = "block";
-
-    // Add an event listener to the play again button that resets the quiz
+  
+    
     playAgainButtonElement.addEventListener("click", function () {
       currentQuestion = 0;
       score = 0;
@@ -246,6 +254,8 @@ document.addEventListener("DOMContentLoaded", function () {
       startingSectionElement.style.display = "none";
       questionsSectionElement.style.display = "block";
       startTimer();
+
+  
     });
   }
 });
