@@ -1,10 +1,14 @@
 # fundamentals-of-javascript-quiz
 
+This is a multiple choice quiz on the fundamentals of JavaScript
+
 ## Visit the Site
 
-[Cleck Here to Visit the Deployed Site](put url here)
+[Cleck Here to Visit the Deployed Site](https://ohsweetwampum.github.io/fundamentals-of-javascript-quiz/)
 
 ## Description
+
+This is a multiple-choice quiz on the fundamentals of JavaScript. It was made with HTML, CSS, and, of course, lots of JavaScript. Once you click the start button, you are presented with a question and a choice between four different answers, which are buttons that you click on. If you answer incorrectly, then 10 seconds are subtracted from the timer, and you also lose 5 points. You gain 5 points for every correct answer. At the end, you can enter your initials and save your score. If your score is among the top ten highest, then it will show up on the leaderboard. You can press the play again button to do the quiz again.
 
 ## Technology Used
 

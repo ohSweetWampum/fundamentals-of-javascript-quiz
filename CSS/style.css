@@ -1,4 +1,4 @@
-/* Global styles */
+/* main styles */
 #startingScreen, #questionsScreen, #gameOverScreen, #leaderboardScreen {
   display: flex;
   flex-direction: column;
@@ -6,6 +6,8 @@
   align-items: center;
   height: 100vh;
 }
+
+
 
 #questionsScreen, #gameOverScreen {
   display: none;
@@ -70,12 +72,12 @@
 #leaderboardScreen li {
   margin: 10px;
   padding: 10px;
-  border: 2px solid black;
+  border: 2px solid rgb(63, 42, 165);
   border-radius: 10px;
-  background-color: lightgray;
+  background-color: rgb(44, 162, 54);
 }
 
-/* Center question text and answer option buttons */
+/*  question text and answer option buttons */
 #questionsScreen div {
   display: flex;
   justify-content: center;
@@ -86,18 +88,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 80px;
-  font-size: 16px; /* adjust font size as needed */
-  margin: 20px;
-  padding: 10px; /* adjust padding as needed */
+  width: 205px;
+  height: 85px;
+  font-size: 16px; 
+  margin: 25px;
+  padding: 10px; 
   border: none;
-  border-radius: 10px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  box-shadow: 3px 3px 5px rgba(178, 76, 76, 0.2);
   background-color: #f7f7f7;
-  color: #333;
+  color: #191717;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
 }
 
 
@@ -124,21 +126,21 @@
 
 #submitIntialsButton, #playAgain {
   margin-top: 20px;
-  background-color: #2196f3;
+  background-color: #bc16b6;
   color: #f7f7f7;
 }
 
 #submitIntialsButton {
-  width: 70px;
+  width: 72px;
   height: 20px;
-  font-size: 20px;
+  font-size: 22px;
   border-radius: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #h1QuestionText {
-  font-size: 48px;
+  font-size: 50px;
   font-weight: bold;
   text-align: center;
   margin: 40px 0;
@@ -201,7 +203,7 @@
   align-items: center;
   margin-top: 50px;
 }
-/* Style for leaderboard section */
+
 #leaderboardScreen {
   display: flex;
   flex-direction: column;
@@ -244,4 +246,28 @@
 #playAgain {
   margin: auto;
   display: block;
+}
+#leaderboardScreen {
+  display: none;
+}
+
+/* // very basic media queiries */
+/* /* Small devices  */
+@media (min-width: 576px) { 
+  /* Your CSS rules for small devices */
+}
+
+/* /* Medium devices  */
+@media (min-width: 768px) { 
+  /* Your CSS rules for medium devices */
+}
+
+/* /* Large devices */
+@media (min-width: 992px) { 
+  /* Your CSS rules for large devices */
+}
+
+/* /* Extra large devices  */
+@media (min-width: 1200px) { 
+  /* Your CSS rules for extra large devices */
 }

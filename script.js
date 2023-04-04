@@ -13,7 +13,7 @@ var questionsTextElement = document.getElementById("h1QuestionText");
 var AnswerOptionButtonsElement =
   document.querySelectorAll(".answerButtonClass");
 
-//gamerover section
+//gameover section
 var gameOverSectionElement = document.getElementById("gameOverScreen");
 var userScoreElement = document.getElementById("savedScore");
 var enterInitialsElement = document.getElementById("enterInitalsHere");
@@ -121,15 +121,16 @@ var quizQuestions = [
       "Used to set or add an attribute to a particular element and provides a value to it",
   },
 ];
-
+//Added this to ensure that the html is completely loade before the JS is executed
 document.addEventListener("DOMContentLoaded", function () {
-  //timer operation function
+  //timer will start when user clicks the start button
   displayQuestionAndAnswerOptions();
   startButtonElement.addEventListener("click", function () {
     startingSectionElement.style.display = "none";
     questionsSectionElement.style.display = "block";
-    startTimer(); // Add this line to call the startTimer function
+    startTimer(); 
   });
+  // start timer function
   function startTimer() {
     startingSectionElement.style.display = "none";
     questionsSectionElement.style.display = "block";
@@ -159,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     }
   }
-
+// this will direct you to differnetly based on if you choose right or wrong
   function howToDirectBasedOnChoice(event) {
     var selectedOption = event.target.textContent;
     scoreAnswerToQuestion(selectedOption);
@@ -175,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  //quiz section function
+  //quiz flow section function
   function quizSectionFlow() {
     if (currentQuestion === quizQuestions.length - 1) {
       questionsSectionElement.style.display = "none";
@@ -186,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
       displayQuestionAndAnswerOptions();
     }
   }
-
+//function to store user data to local storage
   function storeToLocal(userScore) {
     var savedScores = JSON.parse(localStorage.getItem("userScore")) || [];
     if (!Array.isArray(savedScores)) {
@@ -195,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
     savedScores.push(userScore);
     localStorage.setItem("userScore", JSON.stringify(savedScores));
   }
-
+//function to let user enter their initials and save score
   function gameOverMessage(event) {
     if (event) {
       event.preventDefault();
@@ -217,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   submitButtonElement.addEventListener("click", gameOverMessage);
-
+// function that displays the top scores on a leaderboard and allows the user to press the paly again button
   function loadLeaderboardScreen() {
     
     var savedScores = JSON.parse(localStorage.getItem("userScore")) || [];
