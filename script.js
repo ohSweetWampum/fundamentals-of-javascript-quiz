@@ -6,6 +6,7 @@
  
 //Initializing starting score and what question they are on
  var score = 0;
+ 
  var currentQuestion = 0;
  var secondsLeft = 120;
 
@@ -95,67 +96,55 @@ startButtonElement.addEventListener("click", function() {
 }
 
 //game over function
-function gameOverMessage(){
+function gameOverMessage(event) {
+    event.preventDefault();
     questionsSectionElement.style.display = "none";
     gameOverSectionElement.style.display = "block";
     userScoreElement.textContent = score;
-    submitButtonElement.addEventListener("click", function(){
-        var initials = enterInitialsElement.value;
-        var userScore = {
-            initials: initials,
-            score: score
-        };
-        localStorage.setItem("userScore", JSON.stringify(userScore));
+
+    var initials = enterInitialsElement.value;
+    var userScore = {
+      initials: initials,
+      score: score
+    };
+    
+    localStorage.setItem("userScore", JSON.stringify(userScore));
+    loadLeaderboardScreen();
+  };
+
+  submitButtonElement.addEventListener("click", gameOverMessage);
+    
+    
+  });
+
+
+  function loadLeaderboardScreen() {
+    var scores = JSON.parse(localStorage.getItem("userScore")) || [];
+  
+    // Check if scores is an array, and create a new array if it is not
+    if (!Array.isArray(scores)) {
+      scores = [scores];
+    }
+  
+    startingSectionElement.style.display = "none";
+    questionsSectionElement.style.display = "none";
+    gameOverSectionElement.style.display = "none";
+    leaderboardScreenSectionElement.style.display = "block";
+  
+    scores.sort(function (a, b) {
+      return b.score - a.score;
     });
-}
-});
-
-
-
-
-
-
-
-
- 
-        
-
-
   
-// startButtonElement.addEventListener("click", function() {
-//     startingSectionElement.style.display = "none";
-//     questionsSectionElement.style.display = "block";
-//   });
-//   var countdownClock = document.getElementById("countdown");
-//  document.getElementById("startTimerNowButton").addEventListener("click", function(){
-//     function timeLeftClock(){
-//         var timerInterval = setInterval(function(){
-//             secondsLeft--;
-//             countdownClock.textContent = secondsLeft + " seconds left!";
-//             if(secondsLeft === 0){
-//                 clearInterval(timerInterval);
-//                 gameOverMessage();
-//             }
-//         }, 1000);
-//       }
-      
-//       // call the function to start the countdown timer
-//       timeLeftClock();
-  
-//   });
-  
+    leaderboardAdditionsElement.innerHTML = "";
+    for (var i = 0; i < scores.length; i++) {
+      var allUserScores = document.createElement("li");
+      allUserScores.textContent = scores[i].initials + " -> " + scores[i].score;
+      leaderboardAdditionsElement.appendChild(allUserScores);
+    }
+  }
 
 
 
-
-
-
-
-
-
- 
-
-  
   
 // Making my  questions, made an array of objects.Easy access to all questions via an index.Made a property "options" array for each questions options.
 var quizQuestions = [

@@ -24,7 +24,7 @@
 
 
 <!--Question Section (make like 10) -->
-    <section id = "questionsScreen" style="display: none;" >
+    <section id = "questionsScreen" >
         <div id = "countdownTimer">
             <label id = "secondsLeftOnTimer" >Seconds Left: </label>
             <p id = "actualTimeLeft"></p>
@@ -42,20 +42,21 @@
   
 
    <!--Game over screen where you are displayed score and can enter intials  -->
-    <section id = "gameOverScreen" style="display: none;">
+    <section id = "gameOverScreen" >
         <div>
             <h1 id = "gameOverH1">Game Over!</h1>
             <p id = "gameOverP">Your score: <span id="savedScore"></span></p>
+        <div id = "submitButtonContainer">
             <form id="gameOverForm">
             <label>Enter your intials:</label>
-            <input id="enterInitalsHere" placeholder="Enter Your Initials Here" type="text"/>
-            <button id = "submitIntialsButton"></button>
+            <input id="enterInitalsHere" placeholder="Enter Your Initials Here" type="text"/><button id = "submitIntialsButton">Sumbit</button>
+        </div>
         </div>
     </section>
 
  <!-- highscore leaderboard screen -->
 
-    <section id = "leaderboardScreen" style="display: none;">
+    <section id = "leaderboardScreen" >
     <div>
         <h1 id = "leaderboardH1">leaderboard:</h1>
     </div>

@@ -1,10 +1,13 @@
 
-#startingScreen {
+#startingScreen, #questionsScreen, #gameOverScreen, #leaderboardScreen   {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh; 
+  }
+  #questionsScreen, #gameOverScreen, {
+    display: none;
   }
   
   
@@ -39,13 +42,22 @@
 
   }
   
-  
+  #submitIntialsButton{
+    width: 70px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 20%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+  }
+    
 
-  <section id = "startingScreen">
-        <div>
-            <h1 id = "h1StartScreen">JavaScript Quiz</h1>
-            <p id = "pStartScreen">Welcome! Learning JavaScript is a necessity for modern fullstack developers. This quiz is designed to test your understanding of JavaScript. This quiz is a multiple choice quiz consisting of 10 questions about JavaScript. You have 2 minutes to complete the quiz and every question you get wrong substracts 5 seconds off the timer, so choose wisely! Click the start button once you are ready to begin. </p>
-        </div>
-        <div>
-            <button id = "startTimerNowButton">START</button>
-        </div>
+
+
+
+
+
+
+ 
